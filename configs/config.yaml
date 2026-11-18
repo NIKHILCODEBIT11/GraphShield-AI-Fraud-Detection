@@ -1,0 +1,25 @@
+seed: 42
+
+data:
+  num_accounts: 4000
+  num_transactions: 28000
+  fraud_ring_count: 35
+  ring_size_min: 4
+  ring_size_max: 7
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+model:
+  hidden_dim: 64
+  heads: 4
+  dropout: 0.3
+  lr: 0.005
+  weight_decay: 0.0005
+  epochs: 120
+  patience: 20
+
+paths:
+  processed_data: "artifacts/graph_data.pt"
+  best_model: "artifacts/best_gatv2.pt"
+  metrics_report: "artifacts/benchmark_metrics.json"
